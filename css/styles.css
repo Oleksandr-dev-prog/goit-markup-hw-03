@@ -74,8 +74,26 @@ font-weight: 400;
   margin: 0 auto;
 }
 
+.header{
+    padding:24px 0 25px;
+}
+
+.header-portfolio{
+    border-width:1px;
+    border-color:#ECECEC;
+    border-style:solid;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+}
+
+.header .logo-link {
+    margin-right: 93px;
+}
+
 .logo-link {
-margin-right:93px;
 
     color:inherit;
     font-family: var(--second-family);
@@ -88,13 +106,15 @@ margin-right:93px;
 }
 
 
-.nav-list,.header-container {
+.nav-list{
     display:flex;
+    gap: 50px;
 }
 
-.contact-list{
+.header-list{
     display: flex;
     margin-left: auto;
+   gap: 50px;
 }
 
 .nav-link{font-size: 14px;
@@ -107,9 +127,7 @@ color: var(--color-text-main);
     color: var(--color-accent);
 }
 
-.nav-list:not(last-child),.header-contact:not(las-child){
-    margin-right: 50px;
-}
+
 
 .header-contact {
     font-size: 14px;
@@ -129,11 +147,24 @@ color: var(--color-text-main);
 
 .hero{
     background-color: #2F303A;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    
     
     
 }
+.hero .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+}
 
 .hero-title{
+    max-width: 696px;
+    margin-bottom: 30px;
+
+
 font-size: 44px;
     font-weight: 900;
     line-height:1.36;
@@ -144,8 +175,11 @@ font-size: 44px;
 }
 
 .hero-button{
+   
     min-width: 216px;
+    padding: 10px 32px;
     border-radius: 4px;
+    border-width: 0;
 
     text-align: center;
     letter-spacing: var(--ls-wide);
@@ -159,12 +193,17 @@ font-size: 44px;
     cursor:pointer;
 }
 
+.feature, .services, .team, .portfolio {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
 .visually-hidden {
     position: absolute;
     width: 1px;
     height: 1px;
     margin: -1px;
-    border: 0;
+    border: none;
     padding: 0;
 
     white-space: nowrap;
@@ -173,7 +212,18 @@ font-size: 44px;
     overflow: hidden;
 }
 
+.feature-list{
+display: flex;
+gap:30px;
+}
+
+.feature-item{
+    flex-basis:calc((100% - 3*30px)/4)
+}
+
 .feature-title {
+margin-bottom: 10px;
+
     font-size: 14px;
     font-weight: 700;
 }
@@ -184,14 +234,43 @@ font-size: 44px;
     line-height: 1.71;
 }
 
+.services .section-title {
+    margin-bottom: 50px;
+}
+
+.services-list, .team-list{
+    display: flex;
+    gap: 30px;
+}
+
 .section-title {
+margin-bottom: 50px;
+
 font-size: 36px;
  font-weight: 700;
  text-align: center;
 }
 
+.team{
+    background: var(--color-bg-secondary);
+}
+
+.team-info {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.team-item {
+    border-radius: 0 0 4px 4px;
+
+    background-color: var(--color-bg-primary);
+    box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
+    
+}
 
 .team-title{
+margin-bottom: 10px;
+
 font-weight: 500;
 text-align: center;
   
@@ -203,7 +282,15 @@ color: var(--color-text-secondary);
 }
 
 .footer {
+    padding-top: 60px;
+    padding-bottom: 60px;
+
     background-color: #2F303A;;
+}
+
+.footer .logo-link {
+    display: inline-block;
+    margin-bottom: 28px;
 }
 
 .logo-footer{
@@ -215,10 +302,19 @@ color: var(--color-text-secondary);
 }
 
 .contact-address{
+   margin-bottom: 12px;
+
     color: var(--color-bg-primary);
     font-size: 14px;
     line-height: 1.71;
 }
+
+.contact-items{
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+
 .contact-link{
 color: rgba(255, 255, 255, 0.6);
 font-size: 14px;
@@ -229,7 +325,17 @@ font-size: 14px;
     color: var(--color-accent);
 }
 
+.filter-list{
+    display: flex;
+    gap:8px;
+    justify-content: center;
+    margin-bottom: 50px;
+    
+}
+
 .filter-button{
+padding: 6px 22px;
+
 border-radius: 4px;
 cursor: pointer;
     line-height: 1.625;
@@ -243,7 +349,23 @@ cursor: pointer;
     color: var(--color-bg-primary);
 }
 
+.portfolio-list {
+    display: flex;
+    gap:30px;
+    flex-wrap: wrap;
+}
+
+.portfolio-info {
+    padding: 20px 24px;
+    border-bottom:  1px solid #eee;
+    border-left: 1px solid #eee;
+    border-right: 1px solid #eee;
+   
+}
+
 .portfolio-title{
+    margin-bottom: 4px;
+
     font-weight: 700;
     font-size: 18px;
     line-height: 2;
