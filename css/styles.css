@@ -193,7 +193,7 @@ font-size: 44px;
     cursor:pointer;
 }
 
-.feature, .services, .team, .portfolio {
+.section{
     padding-top: 94px;
     padding-bottom: 94px;
 }
@@ -234,9 +234,6 @@ margin-bottom: 10px;
     line-height: 1.71;
 }
 
-.services .section-title {
-    margin-bottom: 50px;
-}
 
 .services-list, .team-list{
     display: flex;
